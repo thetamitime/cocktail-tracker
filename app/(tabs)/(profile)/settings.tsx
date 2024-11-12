@@ -48,7 +48,7 @@ const SettingsScreen = () => {
     if (form.password) updates.password = form.password;
   
     // Show modal for the user to enter their current password
-    if (form.email || form.password) setIsModalVisible(true);
+    if (form.username || form.email || form.password) setIsModalVisible(true);
   };
 
   const [colorScheme, setColorScheme] = useState<boolean | null>(null); // Ensure it can be null initially
@@ -118,11 +118,9 @@ const SettingsScreen = () => {
   
       // Update the displayName (if provided) and Firestore document
       if (updates.username) {
-        await updateProfile(user, { displayName: updates.username });
+        await updateProfile(user, { displayName: form.username });
+        await updateDoc(doc(db, 'users', user.uid), { username: form.username });
       }
-  
-      // Update Firestore document with other info (like username)
-      await updateDoc(doc(db, 'users', user.uid), updates);
   
       console.log('User info updated successfully');
       await handleSignOut(); // Optionally sign out after update
