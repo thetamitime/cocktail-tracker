@@ -147,7 +147,7 @@ const HomeHeader: React.FC<{isDark: boolean}> = ({isDark}) => {
       <Subtitle title="Categories" canExpand={true} handlePress={() => router.push('/all-categories')} otherStyles="mt-8" />
       <View className="flex flex-row justify-between">
         <Category title="Ordinary" />
-        <Category title="Cocktails" />
+        <Category title="Cocktail" />
         <Category title="Beer" />
         <Category title="Coffee" />
       </View>

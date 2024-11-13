@@ -5,7 +5,7 @@ import profile from "@/assets/icons/account-light.png";
 import hide from "@/assets/icons/hide-light.png";
 import show from "@/assets/icons/show-light.png";
 import ordinary from "@/assets/icons/tumber.png";
-import cocktails from "@/assets/icons/cocktail.png";
+import cocktail from "@/assets/icons/cocktail.png";
 import beer from "@/assets/icons/beer.png";
 import coffee from '@/assets/icons/coffee.png';
 import like from '@/assets/icons/heart-light.png'
@@ -25,6 +25,13 @@ import checkBox from '@/assets/icons/checkbox-unchecked-light.png'
 import checkBoxFilled from '@/assets/icons/checkbox-checked-light.png'
 import close from '@/assets/icons/close-light.png'
 import logout from '@/assets/icons/logout-light.png'
+import punch from '@/assets/icons/party.png'
+import shake from '@/assets/icons/shake.png'
+import other from '@/assets/icons/other.png'
+import cocoa from '@/assets/icons/cocoa.png'
+import shot from '@/assets/icons/shot.png'
+import homemade from '@/assets/icons/homemade.png'
+import soft from '@/assets/icons/soft.png'
 
 interface Icon {
   [name: string]: any
@@ -38,7 +45,7 @@ const icons: Icon = {
   hide,
   show,
   ordinary,
-  cocktails,
+  cocktail,
   beer,
   coffee,
   like,
@@ -57,7 +64,14 @@ const icons: Icon = {
   checkBox,
   checkBoxFilled,
   close,
-  logout
+  logout,
+  punch,
+  shake,
+  other,
+  cocoa,
+  shot,
+  homemade,
+  soft
 };
 
 export default icons;
